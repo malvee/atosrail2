@@ -1,13 +1,14 @@
 <html>
 <body>
 <?php
+    include "testDate.php"; 
 	ini_set('max_execution_time', 300);
 	include "twitteroauth.php";
 	include "DatumboxAPI.php";
 	session_start();
 	function addhref($x)
 	{
-		return "<a href=\"" . $x . " \"> " . $x . "</a>" ;
+		return "<a href=\"" . $x . "\" target=\"_blank\" > ". $x . "</a>" ;
 	}
 	function isLink($x)    // gets a string and prints out the links within it
 	{	
@@ -125,7 +126,7 @@
 										echo "<tr class = \"success\">
     									<center><td>".isLink((string)$t->text)."</td></center>"
     									."<center><td>". "<img src =". $t->user->profile_image_url .">" ."</td></center>"
-    									."<center><td>".$t->created_at."</td></center>"
+    									."<center><td>".dateF($t->created_at)."</td></center>"
   										."</tr>";
 					  					$array["text"][$count] = (string) isLink((string)$t->text);
 										$array["sentiment"][$count] = (string) $sentiment;
@@ -139,7 +140,7 @@
 										echo "<tr class = \"danger\">
     									<center><td>".islink((string)$t->text)."</td></center>"
     									."<center><td>". "<img src =". $t->user->profile_image_url .">" ."</td></center>"
-    									."<center><td>".$t->created_at."</td></center>"
+    									."<center><td>".dateF($t->created_at)."</td></center>"
   										."</tr>";
 					  					$array["text"][$count] = (string) isLink((string)$t->text);
 										$array["sentiment"][$count] = (string) $sentiment;
@@ -153,7 +154,7 @@
 										echo "<tr class = \"warning\">
     									<center><td>".islink((string)$t->text)."</td></center>"
     									."<center><td>". "<img src =". $t->user->profile_image_url .">" ."</td></center>"
-    									."<center><td>".$t->created_at."</td></center>"
+    									."<center><td>".dateF($t->created_at)."</td></center>"
   										."</tr>";
 					  					$array["text"][$count] = (string) isLink((string)$t->text);
 										$array["sentiment"][$count] = (string) $sentiment;
@@ -167,7 +168,7 @@
 										echo "<tr class = \"warning\">
     									<center><td>".isLink((string)$t->text)."</td></center>"
     									."<center><td>". "<img src =". $t->user->profile_image_url .">" ."</td></center>"
-    									."<center><td>".$t->created_at."</td></center>"
+    									."<center><td>".dateF($t->created_at)."</td></center>"
   										."</tr>";
 					  					$array["text"][$count] = (string) isLink((string)$t->text);
 										$array["sentiment"][$count] = "neutral";
