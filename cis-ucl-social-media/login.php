@@ -131,7 +131,7 @@
 					  					$array["text"][$count] = (string) isLink((string)$t->text);
 										$array["sentiment"][$count] = (string) $sentiment;
 										$array["profile_pic"][$count] = (string) $t->user->profile_image_url;
-										$array["created_at"][$count] = (string) $t->created_at;
+										$array["created_at"][$count] = (string) dateF($t->created_at);
 										$contains[$count] = (string)$text;
 										$count++;
 									}
@@ -145,7 +145,7 @@
 					  					$array["text"][$count] = (string) isLink((string)$t->text);
 										$array["sentiment"][$count] = (string) $sentiment;
 										$array["profile_pic"][$count] = (string) $t->user->profile_image_url;
-										$array["created_at"][$count] = (string) $t->created_at;
+										$array["created_at"][$count] = (string)dateF($t->created_at);
 										$contains[$count] = (string)$text;
 										$count++;
 									}
@@ -159,7 +159,7 @@
 					  					$array["text"][$count] = (string) isLink((string)$t->text);
 										$array["sentiment"][$count] = (string) $sentiment;
 										$array["profile_pic"][$count] = (string) $t->user->profile_image_url;
-										$array["created_at"][$count] = (string) $t->created_at;
+										$array["created_at"][$count] = (string) dateF($t->created_at);
 										$contains[$count] = (string)$text;
 										$count++;
 									}
@@ -173,7 +173,7 @@
 					  					$array["text"][$count] = (string) isLink((string)$t->text);
 										$array["sentiment"][$count] = "neutral";
 										$array["profile_pic"][$count] = (string) $t->user->profile_image_url;
-										$array["created_at"][$count] = (string) $t->created_at;
+										$array["created_at"][$count] = (string) dateF($t->created_at);
 										$contains[$count] = (string)$text;
 										$count++;
 									}
