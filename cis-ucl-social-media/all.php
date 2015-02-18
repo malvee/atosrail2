@@ -13,7 +13,6 @@ if ($_SESSION['loggedIn'] == 1)
 	<link href  = "../css/styles.css" rel = "stylesheet">
 	</head>
 	<body>
-		
 
 
 
@@ -37,11 +36,13 @@ if ($_SESSION['loggedIn'] == 1)
 			<br>
 
 			<center>
+				<p>Tweets Ready</p>
+				
 				<div class = "container">
 					<div class = "row">
 						<div class = "col-md-12">
-						<table class ="table">
-						<tbody>
+						<table class ="table" >
+						<tbody >
 					<?php 
 					$count = 0;
 					$array = $_SESSION["passed_array"];
@@ -87,13 +88,14 @@ if ($_SESSION['loggedIn'] == 1)
 						</div>
 					</div>
 				</div>
+			
 			</center>
 		
 			
 			
 
 		</div>
-		<div class = "navbar navbar-inverse navbar-fixed-bottom">
+		<div class = "navbar navbar-inverse navbar-fixed-bottom" >
 			<div class = "container">
 				<p class = "navbar-text pull-left">2014 Developed by ATOS-4 Proud Team<br>All Rights Reserved</p>
 			</div>

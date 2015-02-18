@@ -35,6 +35,7 @@ if ($_SESSION["loggedIn"] ==1)
 			<br>
 
 			<center>
+				<p>Tweets Ready</p>
 				<div class = "container">
 					<div class = "row">
 						<div class = "col-md-12">
